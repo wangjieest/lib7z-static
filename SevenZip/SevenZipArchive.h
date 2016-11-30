@@ -29,12 +29,12 @@ namespace SevenZip
 		virtual std::vector<size_t>  GetOrigSizes();
 
 	protected:
-		bool m_ReadMetadata = false;
-		bool m_OverrideCompressionFormat = false;
+		bool m_ReadMetadata;
+		bool m_OverrideCompressionFormat;
 		TString m_archivePath;
 		CompressionFormatEnum m_compressionFormat;
 		CompressionLevelEnum m_compressionLevel;
-		size_t m_numberofitems = 0;
+		size_t m_numberofitems;
 		std::vector<TString> m_itemnames;
 		std::vector<size_t> m_origsizes;
 	private:

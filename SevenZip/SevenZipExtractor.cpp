@@ -93,7 +93,7 @@ namespace SevenZip
                     }
 
                     unsigned __int64 size = prop.uhVal.QuadPart;
-                    origsizes.emplace_back(size);
+                    origsizes.push_back(size);
 
                     // Get name of file
                     hr = archive->GetProperty(i, kpidPath, &prop);
@@ -102,7 +102,7 @@ namespace SevenZip
                         succ = false;
                         break;
                     }
-                    itemnames.emplace_back(prop.vt == VT_BSTR?prop.bstrVal:L"");
+                    itemnames.push_back(prop.vt == VT_BSTR?prop.bstrVal:L"");
                 }
 
                 if (!succ)
